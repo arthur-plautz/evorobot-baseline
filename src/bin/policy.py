@@ -466,7 +466,8 @@ class ErPolicy(Policy):
             if ntrials == self.ntrials:
                 self.count_random += count_random/len(trials)
         else:
-            trials = np.random.choice(len(conditions_list), ntrials, replace=False)
+            repeat_conditions = (self.test > 0) # Only allow repeated conditons for a set of trials in post-evaluation (test > 0) 
+            trials = np.random.choice(len(conditions_list), ntrials, replace=repeat_conditions)
 
         for trial in range(ntrials):
             if self.normalize:

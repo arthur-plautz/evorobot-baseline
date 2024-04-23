@@ -232,6 +232,7 @@ class Algo(EvoAlgo):
 
             self.process_conditions()
             self.save_summary()
+            self.save_best_stats()
 
             print(
                 'Seed %d (%.1f%%) gen %d msteps %d bestfit %.2f bestgfit %.2f bestsam %.2f avg %.2f weightsize %.2f' %

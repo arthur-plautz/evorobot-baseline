@@ -57,7 +57,6 @@ class EvoAlgo(object):
             self.__env_name,
             self.seed,
             env_features,
-            trials=self.policy_trials,
             upload_reference=upload_reference
         )
 
